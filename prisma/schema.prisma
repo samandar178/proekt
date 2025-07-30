@@ -14,8 +14,20 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Task {
+model Hero {
   id        Int     @id @default(autoincrement())
   text      String
-  completed Boolean @default(false)
+  subtitle  String
+  imageUrl    String
+}
+model Pricing{
+  id  Int  @id @default(autoincrement())
+  planName  String
+  price  Float
+  features  String
+}
+model AboutUs{
+  id  Int  @id @default(autoincrement())
+  text  String
+  imageUrl  String
 }
